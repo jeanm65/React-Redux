@@ -1,16 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import phone from '../images/phone.jpg'
+import phone from '../images/phone.jpg';
+import {buyPhone} from '../Redux/Phone/actionPhone';
 
-const PhonesComponent = ({phones}) => {
+
+const PhonesComponent = ({buyPhone, phones}) => {
     return (
         <div className='container'>
             <img src={phone} alt="phone" />
             <p>
-                Available:
-                <span id='count'>{phones}</span>
+                Available :
+                <span id='count'> {phones}</span>
             </p>
-            <button>Acheter</button>
+            <button onClick={() => buyPhone()}>Acheter</button>
         </div>
     );
 };
@@ -21,4 +23,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(PhonesComponent);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    buyPhone: () => {
+      dispatch(buyPhone())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhonesComponent);
