@@ -1,17 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import phone from '../images/phone.jpg'
 
-const PhonesComponent = () => {
+const PhonesComponent = ({phones}) => {
     return (
         <div className='container'>
             <img src={phone} alt="phone" />
             <p>
                 Available:
-                <span id='count'></span>
+                <span id='count'>{phones}</span>
             </p>
             <button>Acheter</button>
         </div>
     );
 };
 
-export default PhonesComponent;
+const mapStateToProps = (state) => {
+  return {
+       phones:state.phones
+  }
+}
+
+export default connect(mapStateToProps)(PhonesComponent);
