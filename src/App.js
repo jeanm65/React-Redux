@@ -1,4 +1,5 @@
-import PhonesComponent from "./Components/PhonesComponent";
+import PhonesContainer from "./Components/PhonesContainer";
+import TvContainer from "./Components/TvContainer";
 import store from "./Redux/store";
 import { Provider } from "react-redux";
 import './App.css';
@@ -9,7 +10,8 @@ function App() {
     <Provider store={store}>
       <h1>Notre application</h1>
     <div className="big-container">
-      <PhonesComponent />
+      <PhonesContainer />
+      <TvContainer />
     </div>
     </Provider>
   );

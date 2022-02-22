@@ -4,9 +4,9 @@ import phone from '../images/phone.jpg';
 import {buyPhone} from '../Redux/Phone/actionPhone';
 
 
-const PhonesComponent = () => {
+const PhonesContainer = () => {
     // the equivalent hook of useStateToProps is useSelector
-    const phones = useSelector((state) => state.phones
+    const phones = useSelector((state) => state.phone.phones
     )
 
     const dispatch = useDispatch()
@@ -36,7 +36,7 @@ const PhonesComponent = () => {
 //   } 
 // }
 
-export default PhonesComponent;
+export default PhonesContainer;
 
 
 // import React from 'react';
