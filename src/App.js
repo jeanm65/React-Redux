@@ -3,6 +3,7 @@ import TvContainer from "./Components/TvContainer";
 import store from "./Redux/store";
 import { Provider } from "react-redux";
 import './App.css';
+import CommentsContainer from "./Components/CommentsContainer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <PhonesContainer />
       <TvContainer />
     </div>
+    <CommentsContainer />
     </Provider>
   );
 }

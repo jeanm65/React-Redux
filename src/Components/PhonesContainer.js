@@ -30,6 +30,8 @@ const PhonesContainer = () => {
     );
 };
 
+export default PhonesContainer;
+
 // const mapStateToProps = (state) => {
 //   return {
 //        phones:state.phones
@@ -44,7 +46,7 @@ const PhonesContainer = () => {
 //   } 
 // }
 
-export default PhonesContainer;
+
 
 
 // import React from 'react';

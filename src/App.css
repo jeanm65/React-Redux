@@ -68,3 +68,8 @@ input {
   font-weight: bold;
   text-align: center;
 }
+.comments{
+  border: 2px solid black;
+  margin: 10px auto;
+  width: 60%;
+}
